@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Game | Home
+        </title>
+        <link rel="stylesheet" href="css/style2.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="barrensavannah.css" />   
+    </head>
+    <body style="background-image: url(images/background_4-1.jpg);">
+        <div id="mainPicture">
+            <div class="picture">
+                <div id="headerSubtext"></div>
+            </div>
+        </div>
+            <div class="contentBox">
+            <div class="innerBox">
+              <center>
+              <div class="heading"> 
+                <h1 id="heading">Group ## Project</h1>
+              </div>
+               
+              <div id="gameReso">
+              <ul>
+                <li>
+                  <a href="game1.html" class="removelinkdefault">Game Rosulution 480*320</a>
+                </li>
+                <li>
+                  <a href="game2.html"class="removelinkdefault">Game Rosulution 720*480</a>
+                </li>
+                <li>
+                  <a href="game3.html" class="removelinkdefault">Game Rosulution 1020*480</a>
+                </li>
+              </ul>
+              </div>
+            </center>
+
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 7</div>
+                <img src="images/mainImage.png" style="width:100%">
+                <div class="text">Screenshot Game</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot 480*320</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot 720*480</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">4 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot 1020*480</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">5 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot Four</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">6 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot Five</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext"> 7 /  7</div>
+                <img src=" " style="width:100%">
+                <div class="text">Screenshot Six</div>
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+                <span class="dot" onclick="currentSlide(7)"></span> 
+              </div>
+
+
+
+              <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    </body>
+</html>
